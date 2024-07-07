@@ -10,10 +10,10 @@ body {
 
 p {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: #000000;
 }
 
 a,
@@ -25,11 +25,11 @@ a:focus {
 }
 
 .navbar {
-    padding: 15px 10px;
+    padding: 5px 5px;
     background: #fff;
     border: none;
     border-radius: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -37,6 +37,7 @@ a:focus {
     box-shadow: none;
     outline: none !important;
     border: none;
+    background: #405189
 }
 
 .line {
@@ -46,6 +47,16 @@ a:focus {
     margin: 40px 0;
 }
 
+.hero_sec {
+    background: #fff;
+
+
+}
+
+.container {
+    background: #405189
+
+}
 /* Sidebar Style */
 .wrapper {
     display: flex;
@@ -56,7 +67,7 @@ a:focus {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: #405189;
     color: #fff;
     transition: all 0.3s;
 }
@@ -67,7 +78,7 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #405189;
 }
 
 #sidebar ul.components {
@@ -82,8 +93,14 @@ a:focus {
 
 #sidebar ul li a {
     padding: 10px;
-    font-size: 1.1em;
+    font-size: 0.9em;
     display: block;
+}
+
+#nav ul li a {
+     padding: 10px;
+    font-size: 0.9em;
+
 }
 
 #sidebar ul li a:hover {
@@ -94,7 +111,7 @@ a:focus {
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: #405189;
 }
 
 a[data-toggle="collapse"] {
@@ -112,7 +129,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: #405189;
 }
 
 ul.CTAs {
@@ -129,7 +146,7 @@ ul.CTAs a {
 
 a.download {
     background: #fff;
-    color: #7386D5;
+    color: #405189;
 }
 
 a.article,

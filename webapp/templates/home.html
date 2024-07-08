@@ -8,6 +8,7 @@
     <!-- Internal CSS -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cards.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
     <body>
@@ -67,9 +68,15 @@
                                     <ul class="nav navbar-nav ml-auto">
                                         <li class="nav-item active"><a class="nav-link" href="#">Page</a></li>
                                         <li class="nav-item"><a class="nav-link" href="#">Page</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Sign Out</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Log Out</a></li>
                                         <!-- Rounded-circle Image -->
-                                        <img class="rounded-circle avatar-xs material-shadow" alt="200x200" src="assets/images/dog.jpg">
+                                        <!--<img class="rounded-circle avatar-xs material-shadow" alt="200x200" src="assets/images/dog.jpg"> -->
+
+                                        <button type="button" class="btn btn-light position-relative p-0 avatar-xs rounded-circle" ">
+                                            <span class="avatar-title bg-transparent text-reset">
+                                                <i class="bx bxs-bell"></i>
+                                            </span>
+                                        </button>
                                     </ul>
 
                                 </div>
@@ -149,10 +156,145 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="container-fluid">
+                            <h5 class="mt-5">Bootstrap 4 Horizontal Scrolling</h5>
+                                <p class="subtitle">Horizontal scrolling without CSS. Just copy scrolling wrapper classes</p>
+                            <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
+
+                                    <div class="col-5">
+                                        <div class="card card-block card-1"></div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="card card-block card-2"></div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="card card-block card-3"></div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="card card-block card-4"></div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="card card-block card-5"></div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="card card-block card-6"></div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="card card-block card-7"></div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="card card-block card-8"></div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="card card-block card-9"></div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="card card-block card-10"></div>
+                                    </div>
+                            </div>
+                        </div>
                         <br>
                         <h4>Transactions</h4>
-                        <p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
-
+                            <div data-simplebar style="max-height: 215px;">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xs">
+                                                        <div class="avatar-title bg-danger-subtle text-danger rounded">
+                                                            <i class="ri-netflix-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 ms-2">
+                                                        <h6 class="fs-14 mb-0">Netfilx</h6>
+                                                        <small class="text-muted">2 min Ago</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="text-danger">-$25.50</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xs">
+                                                        <div class="avatar-title bg-success-subtle text-success rounded">
+                                                            <i class="ri-spotify-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 ms-2">
+                                                        <h6 class="fs-14 mb-0">Spotify</h6>
+                                                        <small class="text-muted">5 days Ago</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="text-success">$48.25</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0">
+                                                        <img src="assets/images/users/avatar-2.jpg" alt="" class="avatar-xs rounded" />
+                                                    </div>
+                                                    <div class="flex-shrink-0 ms-2">
+                                                        <h6 class="fs-14 mb-0">Emily Slater</h6>
+                                                        <small class="text-muted">8 days Ago</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="text-success">$354.90</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0 avatar-xs">
+                                                        <div class="avatar-title bg-secondary-subtle text-secondary rounded">
+                                                            <i class="ri-paypal-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-shrink-0 ms-2">
+                                                        <h6 class="fs-14 mb-0">Paypal</h6>
+                                                        <small class="text-muted">1 month Ago</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="text-danger">-$12.22</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex">
+                                                    <div class="flex-shrink-0">
+                                                        <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xs rounded" />
+                                                    </div>
+                                                    <div class="flex-shrink-0 ms-2">
+                                                        <h6 class="fs-14 mb-0">Harvey Wells</h6>
+                                                        <small class="text-muted">4 month Ago</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="text-success">-$459.78</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                     </div>
                 </div>
             {% else %}
@@ -184,7 +326,7 @@
                                 <input type="checkbox" class="form-check-input" id="rememberMe">
                                 <label class="form-check-label" for="rememberMe">Remember me</label>
                             </div>
-                            <a class="forgot" href="#">Forgot password?</a>
+                            <a class="forgot" href="{% url 'forgot_password' %}">Forgot password?</a>
                         </div>
                         <br>
                         <div class="text-center">

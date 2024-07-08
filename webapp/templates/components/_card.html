@@ -1,0 +1,55 @@
+<!-- _card.html -->
+<div class="col-lg-3 col-md-6">
+    <div class="card bg-white rounded-4 p-2 mb-lg-0 mb-3" style="width: 18rem;">
+        {% if card_image %}
+            <img src="{{ card_image }}" class="card-img-top" alt="{{ card_image_alt }}">
+        {% endif %}
+        <div class="card-body">
+            {% if card_title %}
+                <h5 class="card-title">{{ card_title }}</h5>
+            {% endif %}
+            {% if card_text %}
+                <p class="card-text">{{ card_text }}</p>
+            {% endif %}
+            {% if progress %}
+                <div class="card bg-light overflow-hidden mt-2">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0"><b class="text-success">{{ progress_percentage }}%</b> {{ progress_text }}</h6>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <h6 class="mb-0">{{ time_left }}</h6>
+                            </div>
+                        </div>
+                        <div class="progress bg-success-subtle rounded-0 mt-2">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: {{ progress_percentage }}%" aria-valuenow="{{ progress_percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            {% if avatars %}
+                <div class="hstack gap-3 mt-2">
+                    <div class="avatar-group">
+                        {% for avatar in avatars %}
+                            <a href="javascript:void(0);" class="avatar-group-item material-shadow" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ avatar.title }}">
+                                {% if avatar.image %}
+                                    <img src="{{ avatar.image }}" alt="{{ avatar.title }}" class="rounded-circle avatar-sm">
+                                {% else %}
+                                    <div class="avatar-sm">
+                                        <div class="avatar-title rounded-circle {% if avatar.bg_color %}bg-{{ avatar.bg_color }}{% endif %} text-primary">
+                                            {{ avatar.initials }}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+            {% if button %}
+                <a href="{{ button.url }}" class="btn btn-primary mt-2">{{ button.text }}</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

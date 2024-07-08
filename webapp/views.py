@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from .forms import SignUpForm, AddRecordForm
+from .forms import SignUpForm, AddRecordForm, PasswordResetForm
 from .models import Record
 
 def home(request):
@@ -19,6 +19,7 @@ def home(request):
         records = Record.objects.all()
         return render(request, 'home.html', {'records': records})
 
+
 def login_user(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -34,6 +35,9 @@ def login_user(request):
 def logout_user(request):
     logout(request)
     return redirect('home')
+
+def notifications(request):
+    return redirect('notifications')
 
 def register_user(request):
     if request.method == 'POST':
@@ -99,3 +103,13 @@ def update_record(request, pk):
         return redirect('home')
 
 # Other views like customer_record, delete_record, add_record, update_record should be defined here as well
+def forgot_password(request):
+    if request.method == 'POST':
+        form = PasswordResetForm(request.POST)
+        if form.is_valid():
+            # Handle password reset logic here
+            messages.success(request, 'Password reset link has been sent to your email')
+            return redirect('home')
+    else:
+        form = PasswordResetForm()
+    return render(request, 'forgot_password.html', {'form': form})
